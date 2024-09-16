@@ -33,10 +33,13 @@ h2{
     
 }
 .botao{
+    color: white;
     font-size: 20px;
     padding: 15px;
     margin: 15px;
     border: none;
+    border: 3px solid black;
+    box-shadow: 0px 2px 5px black;
     background: linear-gradient(29deg, #96007d, rgb(192, 196, 0));
     border-radius: 10px;
     cursor: pointer;

@@ -18,6 +18,10 @@ let linha2 = document.getElementById('linha2');
 let nome2 = document.getElementById('tarefa2');
 let tempo2 = document.getElementById('tempo2');
 
+//Pomodoro
+let interval;
+let timer2 = document.getElementById('timer');
+
 function criar(){
     //dado a ser inserido na lista
     if(nome.value == '' || tempo.value == '') return alert("Preencha as informações antes de criar!");
@@ -157,17 +161,18 @@ function timer(){
     document.getElementById('atividade').innerHTML = listaAtiva[0]['nome'];
     let minutos = (listaAtiva[0].tempo - 1) < 10 ? "0" + (listaAtiva[0].tempo - 1) :(listaAtiva[0].tempo - 1);
     let segundos = 59;
-    setInterval((function relogio(){
+    interval = setInterval((function relogio(){
         segundos = segundos < 10 ? "0" + segundos : segundos;
         document.getElementById('timer').innerHTML = `${minutos}:${segundos}`;
         if(segundos == 0){
             if(minutos == 0) {
-                if(listaAtiva.length == 0) console.log("tws");
+                if(listaAtiva.length == 0) clearInterval(interval);
                 console.log("acabou!");
                 listaAtiva.splice(0,1);
                 
                 //muda de tarefa
-                minutos = (listaAtiva[0].tempo - 1) < 10 ? "0" + (listaAtiva[0].tempo - 1) :(listaAtiva[0].tempo - 1);
+                document.getElementById('atividade').innerHTML = listaAtiva[0]['nome']; 
+                minutos = (listaAtiva[0].tempo - 1) < 10 ? "0" + (listaAtiva[0].tempo) :(listaAtiva[0].tempo);
                 segundos = 59;
             }
             minutos--;
@@ -178,7 +183,26 @@ function timer(){
         segundos--;
     }),1000);
     //na hora que o timer zerar
+    if(listaAtiva.length == 0) ;
+}
+function pararPomodoro(){
+    if(!(interval == null)){
+        clearInterval(interval);
+        timer2.innerHTML = "00:00";
+        document.getElementById('atividade').innerHTML = "Ligue o Pomodoro primeiro!";
 
+    }
+    else{
+        alert("Inicie primeiro o pomodoro!");
+    }
+}
+function pausarPomodoro(){
+    if(!(interval == null)){
+        clearInterval(interval);
+    }
+    else{
+        alert("Inicie primeiro o pomodoro!");
+    }
 }
 
 //ao concluir qualquer atividade, tocar uma notificação

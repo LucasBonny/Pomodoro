@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="projeto">
+        <div class="sessao">
+            <!--Fazer um timer dividindo as tarefas de acordo com o tempo determinado-->
+            <h1>POMODORO</h1>
+            <p class="timer" id="timer">00:00</p>
+            <h2>Atividade Atual</h2>
+            <div id="atividade">Ligue o Pomodoro primeiro!</div>
+            <div class="starter">
+                <button class="botao" id="botao" onclick="iniciarPomodoro()">Começar Pomodoro</button>
+                <button class="botao" id="botao" onclick="pararPomodoro()">Parar Pomodoro</button>
+            </div>
+        </div>
+        <hr>
+        <div class="tarefas">
+            <!--Poder inserir a tabela a esquerda-->
+            <div class="adicoes">
+                <div class="inserir">
+                    <div class="preencher">
+                        <div class="inputLabel">
+                            <label for="tarefa">Tarefa</label><br>
+                            <input type="text" name="tarefa" placeholder="Deseja fazer" id="tarefa" class="inputUser"><br>
+                        </div>
+                        <div class="inputLabel">
+                            <label for="tempo">Tempo</label><br>
+                            <input type="number" placeholder="Em minutos" name="tempo" id="tempo" class="inputUser"><br>                        
+                        </div>
+                        <button class="botao" id="submit" onclick="criar()">Criar</button>
+                    </div>
+                </div>
+                <!-- 
+                    Fazer um imput direto para intervalo ao invés de ter que preencher novamente
+                <div class="inserir">
+                    <div class="preencher">
+                        <div class="inputLabel">
+                            <input type="hidden" value="Intervalo">
+                            <label for="tempo">Intervalo</label><br>
+                            <input type="number" placeholder="Em minutos" name="tempo" id="tempo" class="inputUser"><br>                        
+                        </div>
+                        <button class="botao" id="submit" onclick="criar()">Criar</button>
+                    </div>
+                </div> -->
+            </div>
+            <!--
+            Fazer uma tabela na qual terá um botão para movê-lo de um lado para o outro
+            -->
+                <div class="tabelas">
+                    <div class="aFazer">
+                        <!-- Ao adicionar, poder adicionar sem interferir o processo atual-->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tarefa</th>
+                                    <th>Nome</th>
+                                    <th>Tempo</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody id="linha">
+                            </tbody>
+                         </table>
+    
+                    </div>
+                    <div class="fazendo">
+                        <!--Decidir qual vem primeiro podendo mover para cima ou para baixo-->
+                        <!--Poder adicionar um intervalo-->
+                        <!-- Ao adicionar, poder adicionar sem interferir o processo atual-->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tarefa</th>
+                                    <th>Nome</th>
+                                    <th>Tempo</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody id="linha2">
+                            </tbody>
+                         </table>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+</html>

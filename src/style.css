@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(45deg, #000000, crimson);
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sessao{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 5vh;
+}
+h2{
+    font-size: 4vh;
+
+}
+#atividade{
+    font-size: 4vh;
+}
+.timer{
+    font-size: 15vh;
+    font-family: 'Orbitron', sans-serif;
+}
+.starter{
+    padding: 15px;
+    
+}
+.botao{
+    font-size: 20px;
+    padding: 15px;
+    margin: 15px;
+    border: none;
+    background: linear-gradient(29deg, #96007d, rgb(192, 196, 0));
+    border-radius: 10px;
+    cursor: pointer;
+}
+.botao:hover{
+    background: linear-gradient(29deg, #6d005b, rgb(115, 117, 0));
+
+}
+hr{
+    border: 2px solid #c9a400;
+}
+
+.inputUser{
+    outline: none;
+    border: 3px solid dodgerblue;
+    border-radius: 10px;
+    padding: 7px;
+    width: 200px;
+}
+.inserir{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.inputLabel{
+    margin: 10px;
+}
+table, td, th{
+    margin: 20px;
+    text-align: center;
+    color: black;
+    width: 60vh;
+    height: 4vh;
+    background: white;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#interacao{
+    width: 30px;
+}
+.tabelas, .adicoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

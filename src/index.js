@@ -12,7 +12,7 @@ let listaPassiva = [];
 let linha = document.getElementById('linha');
 let nome = document.getElementById('tarefa');
 let tempo = document.getElementById('tempo');
-// LISTA DA DIREITA - 
+// LISTA DA DIREITA - OK
 let listaAtiva = [];
 let linha2 = document.getElementById('linha2');
 let nome2 = document.getElementById('tarefa2');
@@ -150,6 +150,7 @@ function descer2(num){
 //obrigatoriamente ter no minimo 2 atividades
 //se ele tiver 2, iniciar de forma ordenada
 function iniciarPomodoro(){
+    if(!(interval == null)) clearInterval(interval);
     if(listaAtiva.length < 2) return alert("Insira no minimo 2 atividades para o pomodoro!");
     timer();
 }
@@ -163,14 +164,19 @@ function timer(){
     let segundos = 59;
     interval = setInterval((function relogio(){
         segundos = segundos < 10 ? "0" + segundos : segundos;
-        document.getElementById('timer').innerHTML = `${minutos}:${segundos}`;
+        timer2.innerHTML = `${minutos}:${segundos}`;
         if(segundos == 0){
             if(minutos == 0) {
-                if(listaAtiva.length == 0) clearInterval(interval);
-                console.log("acabou!");
                 listaAtiva.splice(0,1);
+                console.log("acabou!");
                 
                 //muda de tarefa
+                if(listaAtiva.length == 0) {
+                    timer2.innerHTML = "00:00";
+                    
+                    return clearInterval(interval);
+                    
+                }
                 document.getElementById('atividade').innerHTML = listaAtiva[0]['nome']; 
                 minutos = (listaAtiva[0].tempo - 1) < 10 ? "0" + (listaAtiva[0].tempo) :(listaAtiva[0].tempo);
                 segundos = 59;

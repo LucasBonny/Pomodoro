@@ -4,7 +4,7 @@ Sistema de controle de tempo, ideal para ter maior foco em suas tarefas diárias
 [![My Skills](https://skillicons.dev/icons?i=html,css,javascript)](https://gunthercloud.com.br)
 
 ## Tempo de produção
-- 13 horas.
+- 16 horas.
 
 ## Dificuldades
 - Timer reverso.
@@ -16,14 +16,17 @@ Sistema de controle de tempo, ideal para ter maior foco em suas tarefas diárias
 - Usar o básico do **readme**
 ## O que falta?
 ### Ordem de prioridade
-- Corrigir a ultima tarefa que faz quebrar
-- Colocar um som quando acabar uma tarefa
-- Bloquear a tarefa #1 para não ser movida quando estiver rodando.
-- Pausar pomodoro
-- Converter horas para minutos
 - Pular Atividade
-- Limpar pomodoro
+- Pausar pomodoro
+- Limpar Tudo no pomodoro
 - input de intervalo
+
+## Ultimo Update
+- Corrigir a ultima tarefa que faz quebrar - Corrigido
+- Colocar um som quando acabar uma tarefa - Adicionado
+- Bloquear a tarefa #1 para não ser movida quando estiver rodando. - Melhorado e corrigido
+- Tratamento apartir de 60 minutos - Feito
+- Converter minutos para horas - Feito
 
 ## Como executar
 

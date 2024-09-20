@@ -3,6 +3,14 @@ Sistema de controle de tempo, ideal para ter maior foco em suas tarefas diárias
 ## Tecnologias Utilizadas
 [![My Skills](https://skillicons.dev/icons?i=html,css,javascript)](https://gunthercloud.com.br)
 
+## Demonstração do projeto
+
+https://lucasbonny.github.io/Pomodoro/
+
+Layout do Pomodoro Web
+
+![image](src/img/model1.png)
+
 ## Tempo de produção
 - 16 horas.
 
